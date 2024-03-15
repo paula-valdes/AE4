@@ -32,18 +32,43 @@ public class Calculadora {
 		entrada.close();
 		
 		// suma
-		int suma = num1 + num2;
+		int suma = suma(num1, num2);
 		
 		// resta
-		int resta = num1 - num2;
+		int resta = resta(num1, num2);
 		
 		// multiplicacion
-		int multiplicacion = num1 * num2;
+		int multiplicacion = multiplica(num1, num2);
 		
 		// division
-		int division = num1 / num2;
+		int division = divide(num1, num2);
 		
 		// visualizacion de resultados
+		visualiza(num1, num2, suma, resta, multiplicacion, division);
+
+	}
+
+	private static int suma(int num1, int num2) {
+		int suma = num1 + num2;
+		return suma;
+	}
+
+	private static int resta(int num1, int num2) {
+		int resta = num1 - num2;
+		return resta;
+	}
+
+	private static int multiplica(int num1, int num2) {
+		int multiplicacion = num1 * num2;
+		return multiplicacion;
+	}
+
+	private static int divide(int num1, int num2) {
+		int division = num1 / num2;
+		return division;
+	}
+
+	private static void visualiza(int num1, int num2, int suma, int resta, int multiplicacion, int division) {
 		System.out.println(num1 + " + " + num2 + " = " + suma);
 		
 		System.out.println(num1 + " - " + num2 + " = " + resta);
@@ -51,7 +76,6 @@ public class Calculadora {
 		System.out.println(num1 + " * " + num2 + " = " + multiplicacion);
 		
 		System.out.println(num1 + " / " + num2 + " = " + division);
-
 	}
 
 }
